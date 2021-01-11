@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
             title="W3Schools Free Online Web Tutorials"
           />
         </Code>
-        <ProjectReview />
+        {/* <ProjectReview /> */}
       </Inline>
       <Player
         autoplay
