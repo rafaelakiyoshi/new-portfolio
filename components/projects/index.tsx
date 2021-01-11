@@ -2,19 +2,9 @@ import { useContext, useState } from 'react'
 import Title from '../title'
 import ProjectCard from '../project-card'
 import { ProjectsGrid, Inline } from './projects.styles'
-import { Browser } from 'react-window-ui'
 import styled from 'styled-components'
 import ProjectsContext from '../../context/projects.context'
 import { Player } from '@lottiefiles/react-lottie-player'
-const NewBrowser = styled(Browser)`
-  padding: 0 !important;
-  padding-top: 2.2em !important;
-  box-shadow: unset !important;
-  width: 60%;
-  height: 60%;
-  overflow: hidden;
-  float: left;
-`
 
 const Code = styled.div`
   height: 100%;
@@ -52,21 +42,19 @@ const Projects: React.FC = () => {
         })}
       </ProjectsGrid>
       <Inline>
-        <NewBrowser background="transparent" padding={0} border={0}>
-          <Code>
-            <iframe
-              style={{
-                border: 'none',
-                overflow: 'hidden',
-                width: '100%',
-                height: '100%',
-                margin: 0
-              }}
-              src="https://project-navigator.vercel.app/project?profile=rafaelakiyoshi&project=Hayai"
-              title="W3Schools Free Online Web Tutorials"
-            />
-          </Code>
-        </NewBrowser>
+        <Code>
+          <iframe
+            style={{
+              border: 'none',
+              overflow: 'hidden',
+              width: '100%',
+              height: '100%',
+              margin: 0
+            }}
+            src="https://project-navigator.vercel.app/project?profile=rafaelakiyoshi&project=Hayai"
+            title="W3Schools Free Online Web Tutorials"
+          />
+        </Code>
         <ProjectReview />
       </Inline>
       <Player
