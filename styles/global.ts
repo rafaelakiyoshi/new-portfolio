@@ -5,15 +5,17 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #e1e1e1;
   }
 
   body {
-    background: #121212;
+    background: rgb(18,18,18);
+background: linear-gradient(145deg, rgba(18,18,18,1) 3%, rgba(41,32,65,1) 100%);
     font-family: "Cutive Mono";
     min-width: auto;
     margin: 0 auto;
     /* padding: 0; */
-    width: 60%;
+    width: 70%;
     height: 100%;
     overflow-x: hidden;
   }

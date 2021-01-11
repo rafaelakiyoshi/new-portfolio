@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { Inline, DividerLeft, DividerRigth, Text } from './title.styles'
+import { Inline, DividerLeft, Columns, TextOne, TextTwo } from './title.styles'
 
 type TitleProps = {
   text: string
@@ -9,8 +9,11 @@ const Title: FunctionComponent<TitleProps> = ({ text }) => {
     <>
       <Inline>
         <DividerLeft />
-        <Text>{text}</Text>
-        <DividerRigth />
+        <Columns>
+          <TextOne>CHECK</TextOne>
+          <TextTwo>OUT MY PROJECTS</TextTwo>
+        </Columns>
+        {/* <DividerRigth /> */}
       </Inline>
     </>
   )
