@@ -1,17 +1,18 @@
-import { FunctionComponent } from 'react'
-import { Inline, DividerLeft, Columns, TextOne, TextTwo } from './title.styles'
+import { Inline, DividerLeft, Columns, TextOne, TextTwo } from './style'
 
 type TitleProps = {
-  text: string
+  textOne: string
+  textTwo: string
 }
-const Title: FunctionComponent<TitleProps> = ({ text }) => {
+const Title = (props: TitleProps): React.ReactElement => {
+  const { textOne, textTwo } = props
   return (
     <>
       <Inline>
         <DividerLeft />
         <Columns>
-          <TextOne>CHECK</TextOne>
-          <TextTwo>OUT MY PROJECTS</TextTwo>
+          <TextOne>{textOne}</TextOne>
+          <TextTwo>{textTwo}</TextTwo>
         </Columns>
         {/* <DividerRigth /> */}
       </Inline>

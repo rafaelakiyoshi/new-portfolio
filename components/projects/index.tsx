@@ -1,31 +1,18 @@
 import { useContext, useState } from 'react'
 import Title from '../title'
 import ProjectCard from '../project-card'
-import { ProjectsGrid, Inline } from './projects.styles'
-import styled from 'styled-components'
+import Button from '../button'
+import { ProjectsGrid, Inline, Code, ProjectReview } from './style'
 import ProjectsContext from '../../context/projects.context'
-import { Player } from '@lottiefiles/react-lottie-player'
-
-const Code = styled.div`
-  height: 100%;
-`
-
-const ProjectReview = styled.div`
-  width: 38%;
-  height: 60%;
-  background: #1d1f2047;
-  border: 1px solid #2e2e2f;
-  float: right;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-`
 
 const Projects: React.FC = () => {
   const { projects, defaultSelectedProject } = useContext(ProjectsContext)
-  const [selectedProject, setSelectedProject] = useState(defaultSelectedProject)
+  const [selectedProject, setSelectedProject] = useState<string>(
+    defaultSelectedProject
+  )
   return (
     <>
-      <Title text="Projects" />
+      <Title textOne="CHECK" textTwo="OUT MY PROJECTS" />
       <ProjectsGrid>
         {projects.map(project => {
           return (
@@ -42,45 +29,28 @@ const Projects: React.FC = () => {
         })}
       </ProjectsGrid>
       <Inline>
+        <ProjectReview>
+          <Button />
+        </ProjectReview>
         <Code>
           <iframe
             style={{
-              border: 'none',
+              border: '1px solid #2e2e2f',
+              borderRadius: '10px',
+              boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
               overflow: 'hidden',
               width: '100%',
               height: '100%',
-              margin: 0
+              margin: '0'
             }}
-            src="https://project-navigator.vercel.app/project?profile=rafaelakiyoshi&project=Hayai"
+            src="https://project-navigator.vercel.app"
+            // src="https://project-navigator.vercel.app/project?profile=rafaelakiyoshi&project=Hayai"
             title="W3Schools Free Online Web Tutorials"
           />
         </Code>
-        {/* <ProjectReview /> */}
       </Inline>
-      <Player
-        autoplay
-        loop
-        src="/animation1.json"
-        style={{
-          height: '300px',
-          width: '300px',
-          position: 'absolute',
-          left: '-2em',
-          bottom: '-60em'
-        }}
-      />
-      <Player
-        autoplay
-        loop
-        src="/earth.json"
-        style={{
-          height: '100px',
-          width: '100px',
-          position: 'absolute',
-          right: '5em',
-          bottom: '-53em'
-        }}
-      />
+      {/* <Astronaut autoplay loop src="/animation1.json" />
+      <Planet autoplay loop src="/earth.json" /> */}
     </>
   )
 }
