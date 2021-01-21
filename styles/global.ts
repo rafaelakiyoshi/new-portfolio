@@ -8,22 +8,30 @@ export default createGlobalStyle`
     color: #e1e1e1;
   }
 
+  
   body {
     background: rgb(18,18,18);
-background: linear-gradient(145deg, rgba(18,18,18,1) 3%, rgba(41,32,65,1) 100%);
+    background: linear-gradient(145deg, rgba(18,18,18,1) 3%, rgba(41,32,65,1) 100%);
     font-family: "Cutive Mono";
-    min-width: auto;
+    /* min-width: auto; */
     margin: 0 auto;
     /* padding: 0; */
-    width: 70%;
+    width: 100%;
     height: 100%;
     overflow-x: hidden;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     body {
-      width: 85%;
+      width: 100%;
     }
+    html {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow: auto;
+  }
   }
 
   ::-webkit-scrollbar {
