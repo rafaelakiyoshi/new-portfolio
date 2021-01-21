@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CardContainer, CardFooter } from './project-card.styles'
+import { CardContainer, CardFooter, Divider, ProjectTitle } from './style'
 
 interface ProjectCardProps {
   setSelectedProject: (key: string) => void
@@ -9,23 +9,23 @@ interface ProjectCardProps {
   selected: boolean
   technologies: string[]
 }
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard = ({
   title,
   projectID,
   description,
   selected,
   technologies,
   setSelectedProject
-}) => {
+}: ProjectCardProps): React.ReactElement => {
   return (
     <CardContainer
       selected={selected}
-      onClick={() => {
-        console.log(projectID)
-        setSelectedProject(projectID)
-      }}
+      onClick={() => setSelectedProject(projectID)}
     >
-      <h2>{title}</h2>
+      <ProjectTitle>
+        <h2>{title}</h2>
+      </ProjectTitle>
+      <Divider />
       <p>{description}</p>
       <CardFooter>
         {technologies.map(tech => {
