@@ -3,23 +3,67 @@ import Title from '../title'
 import ProjectCard from '../project-card'
 import Button from '../button'
 import { ProjectsGrid, Inline, Code, ProjectReview } from './style'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import ProjectsContext from '../../context/projects.context'
-
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 5
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 2
+  }
+}
 const Projects: React.FC = () => {
   const { projects, defaultSelectedProject } = useContext(ProjectsContext)
   const [selectedProject, setSelectedProject] = useState<string>(
     defaultSelectedProject
   )
+  const [projectUrl, setProjectUrl] = useState(
+    projects[+defaultSelectedProject].projectUrl
+  )
   return (
     <>
       <Title textOne="CHECK" textTwo="OUT MY PROJECTS" />
-      <ProjectsGrid>
+      <div style={{ margin: '20px' }}>
+        <Carousel responsive={responsive}>
+          {projects.map(project => {
+            return (
+              <ProjectCard
+                key={project.id}
+                projectID={project.id}
+                projectUrl={project.projectUrl}
+                setSelectedProject={setSelectedProject}
+                setProjectUrl={setProjectUrl}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                selected={project.id === selectedProject ? true : false}
+              />
+            )
+          })}
+        </Carousel>
+      </div>
+      {/* <ProjectsGrid>
         {projects.map(project => {
           return (
             <ProjectCard
               key={project.id}
               projectID={project.id}
+              projectUrl={project.projectUrl}
               setSelectedProject={setSelectedProject}
+              setProjectUrl={setProjectUrl}
               title={project.title}
               description={project.description}
               technologies={project.technologies}
@@ -27,13 +71,14 @@ const Projects: React.FC = () => {
             />
           )
         })}
-      </ProjectsGrid>
+      </ProjectsGrid> */}
       <Inline>
-        <ProjectReview>
+        {/* <ProjectReview>
           <Button />
-        </ProjectReview>
+        </ProjectReview> */}
         <Code>
           <iframe
+            id="frame"
             style={{
               border: '1px solid #2e2e2f',
               borderRadius: '10px',
@@ -43,7 +88,7 @@ const Projects: React.FC = () => {
               height: '100%',
               margin: '0'
             }}
-            src="https://project-navigator.vercel.app"
+            src={projectUrl}
             // src="https://project-navigator.vercel.app/project?profile=rafaelakiyoshi&project=Hayai"
             title="W3Schools Free Online Web Tutorials"
           />
