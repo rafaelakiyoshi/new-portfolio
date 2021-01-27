@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin-top: 50px;
-  height: 95vh;
+  padding-top: 50px;
+  height: 100vh;
   width: 70%;
   margin: 0 auto;
   @media (max-width: 1100px) {
