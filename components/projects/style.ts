@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Player } from '@lottiefiles/react-lottie-player'
 
 export const ProjectsGrid = styled.div`
   display: flex;
@@ -41,20 +40,4 @@ export const ProjectReview = styled.div`
     margin-right: 0;
     border-radius: 30px 30px 0px 0px;
   }
-`
-
-export const Astronaut = styled(Player)`
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  left: 2em;
-  bottom: 60em;
-`
-
-export const Planet = styled(Player)`
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  left: 5em;
-  bottom: -53em;
 `

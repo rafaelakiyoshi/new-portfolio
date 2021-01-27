@@ -9,3 +9,7 @@ export const StyledFooter = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+export const SocialLogo = styled.span`
+  margin: 0 10px;
+`

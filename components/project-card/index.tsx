@@ -1,9 +1,18 @@
 import Image from 'next/image'
-import { CardContainer, CardFooter, Divider, ProjectTitle } from './style'
+import {
+  CardContainer,
+  SelectedCardContainer,
+  CardFooter,
+  Divider,
+  ProjectTitle,
+  ProjectDescription
+} from './style'
 
 interface ProjectCardProps {
   setSelectedProject: (key: string) => void
+  setProjectUrl: (key: string | undefined) => void
   projectID: string
+  projectUrl?: string
   title: string
   description: string
   selected: boolean
@@ -12,27 +21,33 @@ interface ProjectCardProps {
 const ProjectCard = ({
   title,
   projectID,
+  projectUrl,
   description,
   selected,
   technologies,
-  setSelectedProject
+  setSelectedProject,
+  setProjectUrl
 }: ProjectCardProps): React.ReactElement => {
+  const onClickHandler = (): void => {
+    setProjectUrl(projectUrl)
+    setSelectedProject(projectID)
+  }
+
   return (
-    <CardContainer
-      selected={selected}
-      onClick={() => setSelectedProject(projectID)}
-    >
+    <CardContainer selected={selected} onClick={() => onClickHandler()}>
       <ProjectTitle>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
       </ProjectTitle>
       <Divider />
-      <p>{description}</p>
+      <ProjectDescription>
+        <p>{description}</p>
+      </ProjectDescription>
       <CardFooter>
         {technologies.map(tech => {
           return (
             <Image
               key={tech}
-              src={`/${tech}.svg`}
+              src={`/${tech}.svg` || `/${tech}.png`}
               alt={tech}
               width={25}
               height={25}

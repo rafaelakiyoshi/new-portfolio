@@ -35,6 +35,7 @@ export const Right = styled.div`
 export const Paragraph = styled.div`
   padding: 20px;
   text-align: left;
+  font-size: 18px;
   @media (max-width: 1100px) {
     display: none;
     width: 0%;

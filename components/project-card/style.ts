@@ -7,19 +7,38 @@ interface YourProps {
 export const CardContainer = styled.div`
   cursor: pointer;
   height: 150px;
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 220px;
+  max-width: 220px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  --borderWidth: 2px;
   background: #1d1f2047;
-  border: 1px solid #2e2e2f;
   position: relative;
-  border-radius: 10px;
-  transition: 150ms;
-  transform: translateY(${(p: YourProps) => (p.selected ? '-1em' : '0em')});
+  /* padding: 1rem; */
+  position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+
+  border: 1px solid
+    ${(p: YourProps) => (p.selected ? 'transparent' : '#2e2e2f')};
+
+  -moz-border-image: ${(p: YourProps) =>
+    p.selected
+      ? '-moz-linear-gradient(top left, #cc5566 0%, #f8902a 100%)'
+      : 'unset'};
+  -webkit-border-image: ${(p: YourProps) =>
+    p.selected
+      ? '-webkit-linear-gradient(top left, #cc5566 0%, #f8902a 100%)'
+      : 'unset'};
+  border-image: ${(p: YourProps) =>
+    p.selected
+      ? 'linear-gradient(to bottom right, #cc5566 0%, #f8902a 100%)'
+      : 'unset'};
+  border-image-slice: 1;
   &:after {
     content: '';
     position: absolute;
@@ -29,8 +48,8 @@ export const CardContainer = styled.div`
     background: #1d1f2073;
   }
   @media (max-width: 1100px) {
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 180px;
+    max-width: 180px;
   }
 `
 
@@ -54,6 +73,11 @@ export const ProjectTitle = styled.div`
   align-items: center;
   font-family: 'Anton', sans-serif;
   color: #efefef;
+`
+
+export const ProjectDescription = styled.div`
+  /* align-items: center; */
+  margin: 10px auto;
 `
 
 export const Divider = styled.div`

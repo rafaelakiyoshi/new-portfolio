@@ -8,7 +8,6 @@ export default createGlobalStyle`
     color: #e1e1e1;
   }
 
-  
   body {
     background: rgb(18,18,18);
     background: linear-gradient(145deg, rgba(18,18,18,1) 3%, rgba(41,32,65,1) 100%);
@@ -35,7 +34,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 2px;
+    width: 3px;
   }
 
   /* Track */

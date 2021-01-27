@@ -38,7 +38,7 @@ export const Inline = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   @media (max-width: 1100px) {
     margin-bottom: 15px;
   }

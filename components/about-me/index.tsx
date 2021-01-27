@@ -14,15 +14,12 @@ const AboutMe = (): React.ReactElement => {
           height={160}
         />
         <Paragraph>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Hello! I am Rafael Akiyoshi, but people usually call me Akiyoshi. I am
+          a Software Engineer graduated in Brazil, but currently living/working
+          in Montreal-Canada. I love coding anything, but mostly JavaScript! I
+          am always willing to learn new things about this endless world of
+          software development, so if you have a great resource, please share it
+          with me!
         </Paragraph>
       </Left>
       <Right>
