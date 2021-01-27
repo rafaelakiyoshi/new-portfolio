@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import {
   CardContainer,
-  SelectedCardContainer,
   CardFooter,
   Divider,
   ProjectTitle,
