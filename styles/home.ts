@@ -6,8 +6,9 @@ export const Container = styled.div`
   width: 70%;
   margin: 0 auto;
   @media (max-width: 1100px) {
-    height: 95vh;
+    height: 115vh;
     width: 100%;
+    padding-top: 165px;
   }
 `
 
@@ -21,5 +22,6 @@ export const CenteredContainer = styled.div`
   flex-direction: column;
   @media (max-width: 1100px) {
     width: 100%;
+    height: 70vh;
   }
 `

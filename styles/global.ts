@@ -34,23 +34,24 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 3px;
+    width: 5px;
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 1px grey;
+    box-shadow: inset 0 0 3px black;
     border-radius: 0px;
+    background: black;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #ce822b;
+    background: linear-gradient(270deg, #e17741, #af4261);
     border-radius: 0px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+    background: linear-gradient(90deg, #e17741, #af4261);
   }
 `

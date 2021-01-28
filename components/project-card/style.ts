@@ -48,8 +48,8 @@ export const CardContainer = styled.div`
     background: #1d1f2073;
   }
   @media (max-width: 1100px) {
-    min-width: 180px;
-    max-width: 180px;
+    min-width: 330px;
+    max-width: 330px;
   }
 `
 
