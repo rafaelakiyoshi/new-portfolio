@@ -2,6 +2,7 @@ import Head from 'next/head'
 import MyParticles from '../components/particles'
 import AboutMe from '../components/about-me'
 import Footer from '../components/footer'
+import Header from '../components/header'
 import { Container, CenteredContainer } from '../styles/home'
 import Projects from '../components/projects'
 
@@ -20,6 +21,7 @@ const Home = (): React.ReactElement => {
         ></link>
         <title>Rafael Akiyoshi</title>
       </Head>
+      <Header />
       <CenteredContainer>
         <MyParticles />
         <AboutMe />
