@@ -27,8 +27,7 @@ export default createContext<IContext>({
         'less',
         'ant-design'
       ],
-      projectUrl:
-        'https://project-navigator.vercel.app/project?profile=rafaelakiyoshi&project=project-navigator',
+      projectUrl: 'https://github1s.com/rafaelakiyoshi/new-portfolio',
       codeUrl: 'https://project-navigator.vercel.app'
     },
     {

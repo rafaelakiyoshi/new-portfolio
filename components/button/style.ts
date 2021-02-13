@@ -5,13 +5,15 @@ export const StyledButton = styled.button`
   cursor: pointer;
   background: transparent;
   padding: 7px 12px;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border: 0;
+  margin: 2em;
   /* border-image-source: linear-gradient(45deg, #e17741, #af4261); */
   /* border-image-slice: 1; */
   /* font-family: 'Anton', sans-serif; */
   /* background-color: red; */
   background-image: linear-gradient(180deg, #d76c47, #ba4e59);
+  /* background-image: linear-gradient(180deg, #d76c47, #ba4e59); */
   /* background-size: 100%; */
   /* background-repeat: repeat;
   -webkit-background-clip: text;

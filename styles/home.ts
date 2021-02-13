@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const CenteredContainer = styled.div`
   width: 70%;
   margin: 0 auto;
-  height: 100vh;
+  height: 95.9vh;
   display: flex;
   justify-content: center;
   align-items: center;

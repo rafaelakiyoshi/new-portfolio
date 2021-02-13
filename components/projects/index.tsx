@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import Title from '../title'
 import ProjectCard from '../project-card'
 import Button from '../button'
-import { ProjectsGrid, Inline, Code, ProjectReview } from './style'
+import { ProjectsGrid, Inline, Code, Column } from './style'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import ProjectsContext from '../../context/projects.context'
@@ -76,12 +76,17 @@ const Projects: React.FC = () => {
         {/* <ProjectReview>
           <Button />
         </ProjectReview> */}
+        <Column>
+          <Button>CODE</Button>
+          <Button>View Information</Button>
+          <Button>View on Github</Button>
+        </Column>
         <Code>
           <iframe
             id="frame"
             style={{
               border: '1px solid #2e2e2f',
-              borderRadius: '10px',
+              borderRadius: '0px 10px 10px',
               boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
               overflow: 'hidden',
               width: '100%',

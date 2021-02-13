@@ -26,9 +26,9 @@ const Home = (): React.ReactElement => {
         <MyParticles />
         <AboutMe />
       </CenteredContainer>
-      <Container>
+      {/* <Container>
         <Projects />
-      </Container>
+      </Container> */}
       <Footer />
     </>
   )

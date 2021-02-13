@@ -1,9 +1,13 @@
 import { StyledButton } from './style'
 
-const Button = (): React.ReactElement => {
+interface IButton {
+  text: string
+  children: React.ReactElement
+}
+const Button = (props: IButton): React.ReactElement => {
   return (
     <StyledButton>
-      <span>CHECK OUT LIVE</span>
+      <p>{props.children}</p>
     </StyledButton>
   )
 }

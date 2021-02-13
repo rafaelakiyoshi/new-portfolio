@@ -20,7 +20,7 @@ export const Inline = styled.div`
 `
 
 export const Code = styled.div`
-  width: 100%;
+  width: 90%;
   @media (max-width: 1100px) {
     width: 0%;
     display: none;
@@ -40,4 +40,12 @@ export const ProjectReview = styled.div`
     margin-right: 0;
     border-radius: 30px 30px 0px 0px;
   }
+`
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+  /* padding: 2em; */
 `
