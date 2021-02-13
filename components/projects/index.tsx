@@ -76,11 +76,11 @@ const Projects: React.FC = () => {
         {/* <ProjectReview>
           <Button />
         </ProjectReview> */}
-        <Column>
+        {/* <Column>
           <Button>CODE</Button>
           <Button>View Information</Button>
           <Button>View on Github</Button>
-        </Column>
+        </Column> */}
         <Code>
           <iframe
             id="frame"
