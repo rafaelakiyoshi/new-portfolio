@@ -8,6 +8,10 @@ export const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  z-index: 9899;
+  width: 100%;
+  bottom: 0;
 `
 
 export const SocialLogo = styled.span`
