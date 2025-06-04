@@ -1,4 +1,11 @@
-import { Inline, DividerLeft, Columns, TextOne, TextTwo } from './style'
+import {
+  Inline,
+  DividerLeft,
+  Columns,
+  TextOne,
+  TextTwo,
+  DividerRigth
+} from './style'
 
 type TitleProps = {
   textOne: string
